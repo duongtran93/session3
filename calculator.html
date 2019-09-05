@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<table style="border: 3px solid black;width: 200px;height: 200px">
+    <tr>
+        <th colspan="4"><input type="text" id="input" style="text-align: right;width: 180px; font-size: 20px;"></th>
+    </tr>
+    <tr style="text-align: center">
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('7')">7</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('8')">8</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('9')">9</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_tu('/')">/</button>
+        </td>
+    </tr>
+    <tr style="text-align: center">
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('4')">4</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('5')">5</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('6')">6</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_tu('*')">x</button>
+        </td>
+    </tr>
+    <tr style="text-align: center">
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('1')">1</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('2')">2</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('3')">3</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_tu('-')">-</button>
+        </td>
+    </tr>
+    <tr style="text-align: center">
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="del()">C</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_hang('0')">0</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="tinhtoan()">=</button>
+        </td>
+        <td>
+            <button style="font-size: 20px;width: 30px;height: 30px;" type="button" onclick="toan_tu('+')">+</button>
+        </td>
+    </tr>
+</table>
+<script>
+    let number1 = null, number2 = null, operator;
+    let inpValue = document.getElementById("input");
+    let inp;
+
+    function toan_hang(value) {
+        inp = inpValue.value;
+        inp += value;
+        document.getElementById('input').value = inp;
+    }
+
+    function toan_tu(value) {
+        number1=Number(inpValue.value);
+        document.getElementById('input').value="";
+        operator = value;
+    }
+
+    function tinhtoan() {
+        number2=Number(inpValue.value);
+        switch (operator) {
+            case '+':
+                inp = number1 + number2;
+                break;
+            case '-':
+                inp = number1 - number2;
+                break;
+            case '*':
+                inp = number1 * number2;
+                break;
+            case '/':
+                inp = number1 / number2;
+                break;
+        }
+        document.getElementById('input').value=inp;
+    }
+    function del() {
+        document.getElementById('input').value=null;
+    }
+</script>
+</body>
+</html>
