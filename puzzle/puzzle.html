@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+</head>
+<body>
+    <img id="1" src="images/cat1.jpg" alt="cat1" onclick="onChangeImage(this.id);alertt()">
+    <img id="2" src="images/cat2.jpg" alt="cat2" onclick="onChangeImage(this.id);alertt()">
+    <img id="3" src="images/cat3.jpg" alt="cat3" onclick="onChangeImage(this.id);alertt()">
+    <img id="4" src="images/cat4.jpg" alt="cat4" onclick="onChangeImage(this.id);alertt()">
+    <img id="5" src="images/cat5.jpg" alt="cat5" onclick="onChangeImage(this.id);alertt()">
+    <script>
+        function onChangeImage(val) {
+            let img = document.getElementById(val);
+            switch (img.alt) {
+                case "cat1":
+                    img.src = "images/monkey1.jpg";
+                    img.alt = "monkey1";
+                    break;
+                case "monkey1":
+                    img.src = "images/panda1.jpg";
+                    img.alt = "panda1";
+                    break;
+                case "panda1":
+                    img.src = "images/cat1.jpg";
+                    img.alt = "cat1";
+                    break;
+                case "cat2":
+                    img.src = "images/monkey2.jpg";
+                    img.alt = "monkey2";
+                    break;
+                case "monkey2":
+                    img.src = "images/panda2.jpg";
+                    img.alt = "panda2";
+                    break;
+                case "panda2":
+                    img.src = "images/cat2.jpg";
+                    img.alt = "cat2";
+                    break;
+                case "cat3":
+                    img.src = "images/monkey3.jpg";
+                    img.alt = "monkey3";
+                    break;
+                case "monkey3":
+                    img.src = "images/panda3.jpg";
+                    img.alt = "panda3";
+                    break;
+                case "panda3":
+                    img.src = "images/cat3.jpg";
+                    img.alt = "cat3";
+                    break;
+                case "cat4":
+                    img.src = "images/monkey4.jpg";
+                    img.alt = "monkey4";
+                    break;
+                case "monkey4":
+                    img.src = "images/panda4.jpg";
+                    img.alt = "panda4";
+                    break;
+                case "panda4":
+                    img.src = "images/cat4.jpg";
+                    img.alt = "cat4";
+                    break;
+                case "cat5":
+                    img.src = "images/monkey5.jpg";
+                    img.alt = "monkey5";
+                    break;
+                case "monkey5":
+                    img.src = "images/panda5.jpg";
+                    img.alt = "panda5";
+                    break;
+                case "panda5":
+                    img.src = "images/cat5.jpg";
+                    img.alt = "cat5";
+                    break;
+            }
+        }
+        function alertt() {
+            let img1 = document.getElementById('1');
+            let img2 = document.getElementById('2');
+            let img3 = document.getElementById('3');
+            let img4 = document.getElementById('4');
+            let img5 = document.getElementById('5');
+            if ((img1.alt === "cat1" && img2.alt === "cat2" && img3.alt === "cat3" && img4.alt === "cat4" && img5.alt === "cat5")
+            || (img1.alt === "monkey1" && img2.alt === "monkey2" && img3.alt === "monkey3" && img4.alt === "monkey4" && img5.alt === "monkey5")
+            || (img1.alt === "panda1" && img2.alt === "panda2" && img3.alt === "panda3" && img4.alt === "panda4" && img5.alt === "panda5")) {
+                document.getElementById('1').style.boxShadow = "4px 4px 9px red";
+                document.getElementById('2').style.boxShadow = "4px 4px 9px red";
+                document.getElementById('3').style.boxShadow = "4px 4px 9px red";
+                document.getElementById('4').style.boxShadow = "4px 4px 9px red";
+                document.getElementById('5').style.boxShadow = "4px 4px 9px red";
+            } else {
+                document.getElementById('1').style.boxShadow = "1px 1px 1px black";
+                document.getElementById('2').style.boxShadow = "1px 1px 1px black";
+                document.getElementById('3').style.boxShadow = "1px 1px 1px black";
+                document.getElementById('4').style.boxShadow = "1px 1px 1px black";
+                document.getElementById('5').style.boxShadow = "1px 1px 1px black";
+            }
+        }
+    </script>
+</body>
+</html>
