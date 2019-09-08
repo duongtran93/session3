@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập điểm bài kiểm tra: "));
+        let b = parseFloat(prompt("Nhập điểm thi giữa kỳ: "));
+        let c = parseFloat(prompt("Nhập điểm thi cuối kỳ: "));
+        let tb = (a + b*2 + c*3)/6;
+        if (tb >= 8.0) {
+            alert("Học lực đạt loại giỏi");
+        } else if (tb < 8.0 && tb >= 6.5) {
+            alert("Học lực đạt loại khá");
+        } else if (tb < 6.5 && tb >=5.0) {
+            alert("Học lực đạt loại trung bình");
+        } else if (tb < 5.0 && tb >=3.5) {
+            alert("Học lực đạt loại yếu");
+        } else {
+            alert("Học lực đạt loại kém");
+        }
+    </script>
+</body>
+</html>

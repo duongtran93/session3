@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập doanh số bán hàng: "));
+        let hh;
+        if (a < 200000) {
+            hh = a*3/100;
+            alert("Hoa hồng của bạn là: " + hh);
+        } else if (a >= 200000 && a < 500000) {
+            hh = a*5/100;
+            alert("Hoa hồng của bạn là: " + hh);
+        } else {
+            hh = a*10/100;
+            alert("Hoa hồng của bạn là: " + hh);
+        }
+    </script>
+</body>
+</html>
