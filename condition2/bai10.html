@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập số điện (kWh): "));
+        let b;
+        if (a > 0 && a <= 50) {
+            b = a * 1678;
+            alert("Giá điện của bạn là: " + b);
+        } else if (a > 50 && a <= 100) {
+            b = a * 1734;
+            alert("Giá điện của bạn là: " + b);
+        } else if (a > 100 && a <= 200) {
+            b = a * 2014;
+            alert("Giá điện của bạn là: " + b);
+        } else if (a > 200 && a <= 300) {
+            b = a * 2536;
+            alert("Giá điện của bạn là: " + b);
+        } else if (a > 300 && a <= 400) {
+            b = a * 2834;
+            alert("Giá điện của bạn là: " + b);
+        } else if (a > 400) {
+            b = a * 2927;
+            alert("Giá điện của bạn là: " + b);
+        }
+    </script>
+</body>
+</html>

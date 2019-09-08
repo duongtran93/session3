@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <h1>Giải phương trình bậc nhất</h1>
+        <h3>Nhập các tham số của phương trình ax + b = 0</h3>
+        <label>a = </label>&nbsp;
+        <input type="text" id="number_a"><br><br>
+        <label>b = </label>&nbsp;
+        <input type="text" id="number_b"><br><br>
+        <button type="button" onclick="giai()">Kết quả</button><br><br>
+        <div id="result"></div>
+    </form>
+    <script>
+        function giai() {
+            let a = parseInt(document.getElementById("number_a").value);
+            let b = parseInt(document.getElementById("number_b").value);
+            let x;
+            if (a === 0) {
+                if (b === 0) document.getElementById("result").innerText = "Phương trình có vô số nghiệm";
+                else document.getElementById("result").innerText = "Phương trình vô nghiệm";
+            } else {
+                x = -b/a;
+                document.getElementById("result").innerText = "Phương trình có nghiệm duy nhất là x = " + x;
+            }
+        }
+    </script>
+</body>
+</html>
